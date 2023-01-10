@@ -5,5 +5,5 @@ interface ContainerProps {
 }
 
 export default function Container({ children }: ContainerProps) {
-  return <div className={styles.container}>{children}</div>;
+  return <section className={styles.container}>{children}</section>;
 }
