@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "check": "prettier --check .",
-    "write": "prettier --write ."
+    "write": "prettier --write .",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -16,7 +18,7 @@
     }
   },
   "lint-staged": {
-    "*": "prettier --write"
+    "*": "yarn write"
   },
   "dependencies": {
     "@next/font": "13.1.1",
