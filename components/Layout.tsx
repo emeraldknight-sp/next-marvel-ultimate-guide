@@ -1,5 +1,8 @@
 import Head from 'next/head';
+
 import Container from './Container';
+import Header from './Header';
+import Main from './Main';
 
 interface LayoutProps {
   children: React.ReactElement;
@@ -51,9 +54,10 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <main>
+      <Header />
+      <Main>
         <Container>{children}</Container>
-      </main>
+      </Main>
     </div>
   );
 }
