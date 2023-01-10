@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center"> Marvel: Ultimate Guide </h1>
 
-## Getting Started
+<p align="center">
+  Este é um projeto desenvolvido com o framework Next, utilizando CSS Modules e o consumo de APIs para representar em tela os dados que serão resgatados pelas requisições.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 
-```bash
-npm run dev
-# or
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
+
+<br>
+
+<p align="center">
+  <img alt="marvel logo" src=".github/marvel-rounded.png" width="25%">
+</p>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML5, CSS3, JS ES6+
+- [Node e Yarn](https://nodejs.org/)
+- [Next.JS](https://nextjs.org/)
+- [React.JS](https://reactjs.org/)
+- [Create next-app](https://nextjs.org/docs/api-reference/create-next-app)
+- [Typescript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/docs/latest/)
+- [Prettier](https://prettier.io/)
+- [Husky](https://openbase.com/js/husky/documentation)
+- [Lint-staged](https://www.npmjs.com/package/lint-staged/v/8.1.3)
+
+## 💻 Projeto
+
+Este projeto é voltado para a prática e o desenvolvimento das habilidades em Next.JS para criar uma interface responsiva e que represente bem os dados para o usuário usando o consumo de APIs resgatando os dados que serão disponibilizados a quem visitar o site que deverá ser um guia contendo informações sobre personagens de quadrinhos de forma acessível, fácil e completa onde poderão buscar informações complexas e curiosidades para que os fãs aficcionados possam também através deste site desenvolver seus RPGs.
+
+## 🏡 Comandos de execução no projeto
+
+Instalação das dependências do projeto
+
+```sh
+yarn
+```
+
+Teste da aplicação em ambiente de desenvolvimento
+
+```sh
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build da aplicação
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```sh
+yarn build
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Teste da aplicação em ambiente de produção
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```sh
+yarn start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Checar a escrita do código com ESLint e Prettier
 
-## Learn More
+```sh
+yarn check
+```
 
-To learn more about Next.js, take a look at the following resources:
+Formatar código
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+yarn write
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🔖 Layout
 
-## Deploy on Vercel
+<p align="center">
+  <img alt="marvel layout" src=".github/marvel-layout.png" />
+</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para acompanhar o template acesse o site oficial do <a href="https://app-dir.vercel.app/" target="_blank" rel="norefferer">Next.JS</a>.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📝 Licença
+
+Esse projeto está sob a licença MIT.
+
+---
