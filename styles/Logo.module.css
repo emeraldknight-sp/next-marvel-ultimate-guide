@@ -1,0 +1,20 @@
+.logo a {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+  gap: 8px;
+}
+
+.logo h1 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  line-height: var(--line-height-lg);
+  text-align: center;
+}
+
+.logo span {
+  font-size: var(--text-sm);
+  line-height: var(--line-height-sm);
+  text-align: center;
+}
