@@ -25,6 +25,19 @@
   font-weight: 600;
 }
 
+.card_title__xs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card_title__xs h3 {
+  font-size: var(--text-sm);
+  text-align: right;
+}
+
 .card_figure img {
   border-radius: 4px;
 }

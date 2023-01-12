@@ -40,7 +40,7 @@
   border-radius: 4px;
 }
 
-.article ul {
+.article > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
