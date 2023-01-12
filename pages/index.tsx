@@ -47,7 +47,7 @@ export default function Home({ info }: DataProps) {
           Buscar
         </button>
       </div>
-      <article>
+      <article className={styles.article}>
         <ul>
           {data.results.map((char) => (
             <Card key={char.id} char={char} />
