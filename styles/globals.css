@@ -52,8 +52,8 @@ body, select, input, button, textarea {
 }
 
 :root {
-  --primary-color: #34495e;
-  --dark-primary-color: #2c3e50;
+  --primary-color: #1D1F24;
+  --dark-primary-color: #292B32;
 
   --secondary-color: #ecf0f1;
   --dark-secondary-color: #bdc3c7;
@@ -73,14 +73,14 @@ body, select, input, button, textarea {
   --white: #ffffff;
   --black: #000000;
 
-  --text-h1: 2rem;
-  --line-height-h1: 3;
+  --text-xxl: 2rem;
+  --line-height-xxl: 3;
 
-  --text-h2: 1.5rem;
-  --line-height-h2: 2rem;
+  --text-xl: 1.5rem;
+  --line-height-xl: 2rem;
 
-  --text-h3: 1.125rem;
-  --line-height-h3: 1.5rem;
+  --text-lg: 1.125rem;
+  --line-height-lg: 1.5rem;
 
   --text-md: 1rem;
   --line-height-md: 1.5rem;
