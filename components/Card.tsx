@@ -1,27 +1,30 @@
 import Image from 'next/image';
-
-import Avatar from '../public/images/sinistro.png';
+import { CharProps } from '../@types/Card';
 
 import styles from '../styles/Card.module.css';
 
-export default function Card() {
+export default function Card({ char }: CharProps) {
+  const [year, month, day] = char.modified.slice(0, 10).split('-');
+  const avatar = `${char.thumbnail.path}.${char.thumbnail.extension}`;
+  const date = `${day}/${month}/${year}`;
+
   return (
     <div className={styles.card_character}>
       <div className={styles.card_title}>
-        <span>2023bb</span>
-        <h3>Sr. Sinistro</h3>
+        <span>{char.id}</span>
+        <h3>{char.name}</h3>
       </div>
       <figure className={styles.card_figure}>
-        <Image src={Avatar} width="200" height="100" alt="avatar personagem" />
+        <Image src={avatar} width="200" height="200" alt="avatar personagem" />
       </figure>
       <div className={styles.card_details}>
-        <div>
-          Sr. Sinistro é o alter-ego de Nathaniel Essex. Ele faz parte do
-          Universo Marvel.
-        </div>
-        <div>Criadores: Chris Claremont, Marc Silvestri</div>
-        <div>Editora(s): Marvel Comics</div>
-        <div>Outro(s) nome(s): Nathaniell Essex</div>
+        {/* <p>{char.description || 'Não possui descrição.'}</p> */}
+        <p>Quadrinhos: {char.comics.available}</p>
+        <p>Séries: {char.series.available}</p>
+        <p>Histórias: {char.stories.available}</p>
+        <p>Eventos: {char.events.available}</p>
+        <p>Editora(s): Marvel Comics</p>
+        <p>Atualização: {date}</p>
       </div>
     </div>
   );
