@@ -2,8 +2,12 @@
   display: flex;
   background-color: var(--primary-color);
   color: var(--white);
+  width: 100vw;
   height: 10vh;
+  margin: 0 auto;
   border-bottom: 1px solid var(--dark-primary-color);
+  position: fixed;
+  z-index: 1;
 }
 
 .header section {
@@ -20,4 +24,10 @@
   border: 2px solid var(--primary-color);
   border-radius: 4px;
   padding: 4px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header {
+    display: none;
+  }
 }
