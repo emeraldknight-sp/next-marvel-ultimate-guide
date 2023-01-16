@@ -1,7 +1,7 @@
 import styles from '../styles/Container.module.css';
 
 interface ContainerProps {
-  children: React.ReactElement;
+  children?: React.ReactElement | React.ReactElement[];
 }
 
 export default function Container({ children }: ContainerProps) {
