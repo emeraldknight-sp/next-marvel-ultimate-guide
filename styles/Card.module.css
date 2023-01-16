@@ -34,6 +34,7 @@
 }
 
 .card_title__xs h3 {
+  font-weight: 600;
   font-size: var(--text-sm);
   text-align: right;
 }
