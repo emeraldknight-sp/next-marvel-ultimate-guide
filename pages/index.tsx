@@ -36,16 +36,16 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ info }: DataProps) {
   const { data } = info;
   const [characters, setCharacters] = useState<CharacterInfo[]>([]);
+  const [search, setSearch] = useState('');
 
-  const filter = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const filter = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
 
     const filteredResults = data.results.filter((item) =>
-      item.name.toLocaleLowerCase().includes(e.target.value.toLowerCase())
+      item.name.toLocaleLowerCase().includes(search.toLowerCase())
     );
 
     setCharacters(filteredResults);
-    console.log('QTD: ', characters);
   };
 
   return (
@@ -56,11 +56,16 @@ export default function Home({ info }: DataProps) {
           <input
             type="search"
             className={styles.input_input}
-            onChange={filter}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
             placeholder="Pesquisa"
           />
         </div>
-        <button type="submit" className={styles.input_button}>
+        <button
+          type="submit"
+          className={styles.input_button}
+          onClick={(e) => filter(e)}
+        >
           Buscar
         </button>
       </div>
