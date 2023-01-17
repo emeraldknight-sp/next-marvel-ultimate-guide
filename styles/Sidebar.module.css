@@ -12,6 +12,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 1;
 }
 
 .sidebar.active {
@@ -48,7 +49,7 @@
   background: var(--red);
 }
 
-.sidebar span {
+.sidebar h3 {
   font-weight: bolder;
 }
 
@@ -79,6 +80,20 @@
   border: 2px solid var(--red);
   border-radius: 4px;
   background: var(--red);
+}
+
+.blocker {
+  display: flex;
+}
+
+.blocker span {
+  position: static;
+  z-index: 0;
+  top: 50px;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
 }
 
 @media only screen and (min-width: 1024px) {

@@ -50,6 +50,16 @@ table {
 body, select, input, button, textarea {
 	font-family: var(--font-family);
 }
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--primary-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-red);
+  width: 3px;
+  border-radius: 9999px;
+  border: 1px solid var(--dark-red);
+}
 
 :root {
   --primary-color: #1D1F24;
