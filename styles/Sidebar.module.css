@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 425px;
 
-  background: var(--primary-color);
+  background-color: var(--primary-color);
 
   position: fixed;
   top: 0;
@@ -16,7 +16,7 @@
 }
 
 .sidebar.active {
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   left: 0;
   transition: 350ms;
 }
@@ -27,8 +27,9 @@
   justify-content: space-between;
   align-items: center;
   height: 10vh;
+  color: var(--white);
   border-bottom: 2px solid var(--red);
-  padding: 0 20px;
+  padding: 0 20px 0 30px;
 }
 
 .sidebar nav {
@@ -38,7 +39,7 @@
 .sidebar button {
   color: white;
   display: flex;
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   border: 2px solid transparent;
   border-radius: 50%;
   padding: 4px;
@@ -46,11 +47,12 @@
 }
 
 .sidebar button:active {
-  background: var(--red);
+  background-color: var(--red);
 }
 
 .sidebar h3 {
   font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .sidebar ul {
@@ -71,40 +73,46 @@
 .sidebar a {
   width: 100%;
   color: var(--white);
+  text-transform: capitalize;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .sidebar li:active {
   color: var(--white);
   border: 2px solid var(--red);
   border-radius: 4px;
-  background: var(--red);
-}
-
-.blocker {
-  display: flex;
-}
-
-.blocker span {
-  position: static;
-  z-index: 0;
-  top: 50px;
-  left: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100vw;
-  height: 100vh;
+  background-color: var(--red);
 }
 
 @media only screen and (min-width: 1024px) {
-  .sidebar button:hover {
-    background: var(--red);
+  .sidebar {
+    max-width: 300px;
+    /* border-right: 1px solid var(--red); */
+    -webkit-box-shadow: 15px 5px 30px -20px rgba(0, 0, 0, 0.6);
+    box-shadow: 15px 5px 30px -20px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
   }
+
+  /* .sidebar div {
+    border-bottom: 2px solid transparent;
+  } */
+
+  .sidebar button {
+    display: none;
+  }
+
+  /* .sidebar button:hover {
+    background-color: var(--red);
+  } */
 
   .sidebar li:hover {
     color: var(--white);
     border: 2px solid var(--red);
     border-radius: 4px;
-    background: var(--red);
+    background-color: var(--red);
   }
 }
