@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import { BsLinkedin, BsDiscord, BsWhatsapp, BsInstagram } from 'react-icons/bs';
+// import { BsLinkedin, BsDiscord, BsWhatsapp, BsInstagram } from 'react-icons/bs';
 
 import Logo from './Logo';
 import Container from './Container';
+
+import { footer } from '../mock/footer.mock';
 
 import styles from '../styles/Footer.module.css';
 
@@ -16,21 +18,13 @@ export default function Footer() {
           <h3>Início</h3>
           <nav>
             <ul>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Página Inicial
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Downloads
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Sobre
-                </Link>
-              </li>
+              {footer.getStarted.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.url} target="_self" rel="noreferrer">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -38,21 +32,13 @@ export default function Footer() {
           <h3>Sobre nós</h3>
           <nav>
             <ul>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Informações gerais
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Sobre o desenvolvimento
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Junte-se a nós
-                </Link>
-              </li>
+              {footer.about.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.url} target="_self" rel="noreferrer">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -60,21 +46,13 @@ export default function Footer() {
           <h3>Suporte</h3>
           <nav>
             <ul>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Telefone
-                </Link>
-              </li>
-              <li>
-                <Link href="/" target="_self" rel="noreferrer">
-                  Chat
-                </Link>
-              </li>
+              {footer.support.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.url} target="_self" rel="noreferrer">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -82,38 +60,13 @@ export default function Footer() {
           <p>&copy; {currentYear} Copyright | David Almeida</p>
           <nav>
             <ul className={styles.links}>
-              <li>
-                <Link
-                  href="https://www.linkedin.com/in/davidalmeidadev/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsLinkedin size={24} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://discord.gg/RUx9WxZ"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsDiscord size={24} />
-                </Link>
-              </li>
-              <li>
-                <Link href="" target="_blank" rel="noreferrer">
-                  <BsWhatsapp size={24} />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.instagram.com/davidalmeidadev/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsInstagram size={24} />
-                </Link>
-              </li>
+              {footer.contact.map((item) => (
+                <li key={item.id}>
+                  <Link href={item.url} target="_blank" rel="noreferrer">
+                    <span className={item.icon}></span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div className={styles.copyright}>

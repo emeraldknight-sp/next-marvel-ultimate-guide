@@ -41,6 +41,7 @@
 .footer .group_nav p {
   font-size: var(--text-sm);
   line-height: var(--line-height-sm);
+  text-transform: capitalize;
 }
 
 .footer .group_nav a {
@@ -52,6 +53,11 @@
   line-height: var(--line-height-xs);
 }
 
+.footer .links span {
+  font-size: var(--text-xl);
+  line-height: var(--line-height-xl);
+}
+
 .footer .group_nav .links {
   display: flex;
   flex-direction: row;
@@ -61,4 +67,10 @@
 .footer .group_nav .links a {
   display: flex;
   flex-direction: row;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer {
+    padding: 20px 50px 20px 350px;
+  }
 }
