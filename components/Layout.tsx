@@ -4,6 +4,7 @@ import Container from './Container';
 import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
+import SiderbarMenu from './Sidebar';
 
 interface LayoutProps {
   children: React.ReactElement;
@@ -11,7 +12,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div>
+    <>
       <Head>
         <title>Marvel: Ultimate Guide</title>
         <meta
@@ -55,11 +56,16 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Header />
-      <Main>
-        <Container>{children}</Container>
-      </Main>
-      <Footer />
-    </div>
+      <div>
+        <SiderbarMenu />
+        <div>
+          <Header />
+          <Main>
+            <Container>{children}</Container>
+          </Main>
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
