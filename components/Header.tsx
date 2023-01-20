@@ -1,27 +1,20 @@
-import { useState } from 'react';
 import { MdMenu } from 'react-icons/md';
 
-import Blocker from './Blocker';
-import BlockerWrapper from './BlockerWrapper';
 import Container from './Container';
 import Logo from './Logo';
-import SiderbarMenu from './Sidebar';
 
 import styles from '../styles/Header.module.css';
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-  const handleOpenMenu = () => setOpen(!open);
+interface HeaderProps {
+  setSidebarOpen?: () => void;
+}
 
+export default function Header({ setSidebarOpen }: HeaderProps) {
   return (
     <header className={styles.header}>
-      <BlockerWrapper>
-        <SiderbarMenu sidebarOpen={open} setSidebarOpen={handleOpenMenu} />
-        {!open ? <></> : <Blocker />}
-      </BlockerWrapper>
       <Container>
         <Logo />
-        <button type="button" onClick={handleOpenMenu}>
+        <button type="button" onClick={setSidebarOpen}>
           <MdMenu size={24} />
         </button>
       </Container>
