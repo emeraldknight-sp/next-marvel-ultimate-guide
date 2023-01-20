@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head';
 
 import Container from './Container';
@@ -6,11 +7,17 @@ import Header from './Header';
 import Main from './Main';
 import SiderbarMenu from './Sidebar';
 
+import BlockerWrapper from './BlockerWrapper';
+import Blocker from './Blocker';
+
 interface LayoutProps {
   children: React.ReactElement;
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const [open, setOpen] = useState(false);
+  const handleOpenMenu = () => setOpen(!open);
+
   return (
     <>
       <Head>
@@ -56,16 +63,16 @@ export default function Layout({ children }: LayoutProps) {
         <meta name="msapplication-TileColor" content="#ffc40d" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <div>
-        <SiderbarMenu />
-        <div>
-          <Header />
-          <Main>
-            <Container>{children}</Container>
-          </Main>
-          <Footer />
-        </div>
-      </div>
+
+      <BlockerWrapper>
+        <SiderbarMenu sidebarOpen={open} setSidebarOpen={handleOpenMenu} />
+        <Header setSidebarOpen={handleOpenMenu} />
+        <Main>
+          <Container>{children}</Container>
+        </Main>
+        <Footer />
+        {!open ? <></> : <Blocker />}
+      </BlockerWrapper>
     </>
   );
 }
