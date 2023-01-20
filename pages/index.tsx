@@ -70,25 +70,23 @@ export default function Home({ info }: DataProps) {
         </button>
       </div>
       <article className={styles.article}>
-        <div>
-          {characters.length !== 0
-            ? characters.map((char) =>
-                char.thumbnail.path.includes('image_not_available') ||
-                char.thumbnail.path.includes('4c002e0305708') ? (
-                  ''
-                ) : (
-                  <Card key={char.id} char={char} />
-                )
+        {characters.length !== 0
+          ? characters.map((char) =>
+              char.thumbnail.path.includes('image_not_available') ||
+              char.thumbnail.path.includes('4c002e0305708') ? (
+                ''
+              ) : (
+                <Card key={char.id} char={char} />
               )
-            : data.results.map((char) =>
-                char.thumbnail.path.includes('image_not_available') ||
-                char.thumbnail.path.includes('4c002e0305708') ? (
-                  ''
-                ) : (
-                  <Card key={char.id} char={char} />
-                )
-              )}
-        </div>
+            )
+          : data.results.map((char) =>
+              char.thumbnail.path.includes('image_not_available') ||
+              char.thumbnail.path.includes('4c002e0305708') ? (
+                ''
+              ) : (
+                <Card key={char.id} char={char} />
+              )
+            )}
       </article>
     </div>
   );
