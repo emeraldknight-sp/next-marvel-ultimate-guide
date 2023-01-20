@@ -3,6 +3,8 @@ import { MdClose } from 'react-icons/md';
 
 import { optionsMenuSidebar } from '../mock/sidebar.mock.js';
 
+import Logo from './Logo';
+
 import styles from '../styles/Sidebar.module.css';
 
 interface SidebarProps {
@@ -16,7 +18,7 @@ export default function SiderbarMenu({
 }: SidebarProps) {
   return (
     <>
-      <div
+      <aside
         className={
           !sidebarOpen
             ? `${styles.sidebar}`
@@ -24,7 +26,7 @@ export default function SiderbarMenu({
         }
       >
         <div>
-          <h3>Menu</h3>
+          <Logo />
           <button type="button" onClick={setSidebarOpen}>
             <MdClose size={24} />
           </button>
@@ -45,7 +47,7 @@ export default function SiderbarMenu({
             ))}
           </ul>
         </nav>
-      </div>
+      </aside>
     </>
   );
 }
