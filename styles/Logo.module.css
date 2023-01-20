@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.logo figure {
+  display: flex;
+}
+
 .logo span {
   font-size: var(--text-sm);
   line-height: var(--line-height-sm);

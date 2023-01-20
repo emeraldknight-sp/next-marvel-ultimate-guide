@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--primary-color);
   border-top: 5px solid var(--red);
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .footer section {
@@ -67,10 +67,4 @@
 .footer .group_nav .links a {
   display: flex;
   flex-direction: row;
-}
-
-@media only screen and (min-width: 1024px) {
-  .footer {
-    padding: 20px 50px 20px 350px;
-  }
 }

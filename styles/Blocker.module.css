@@ -1,8 +1,8 @@
 .blocker {
-  position: static;
-  z-index: 0;
-  top: 50px;
-  left: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100vw;
   height: 100vh;
