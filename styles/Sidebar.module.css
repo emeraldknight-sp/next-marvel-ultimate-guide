@@ -16,7 +16,6 @@
 }
 
 .sidebar.active {
-  background-color: var(--primary-color);
   left: 0;
   transition: 350ms;
 }
@@ -91,5 +90,9 @@
     border: 2px solid var(--red);
     background-color: var(--red);
     transition: 1s;
+  }
+
+  .sidebar {
+    position: static;
   }
 }
